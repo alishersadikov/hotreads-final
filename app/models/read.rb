@@ -7,7 +7,4 @@ class Read < ApplicationRecord
     limit(10)
   }
 
-  def status
-    "hot" if
-  end
 end
