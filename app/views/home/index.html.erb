@@ -8,8 +8,8 @@
     </tr>
     <% @hotreads.each_with_index do |hotread, index| %>
     <tr>
-      <td><%=hotread.url%></td>
-      <td><%=hotread.hit_count%></td>
+      <td><a href="<%= hotread.url %>"><%= hotread.url %></a></td>
+      <td><center><%=hotread.hit_count%></center></td>
       <td>
         <% if index == 0%>
           top link

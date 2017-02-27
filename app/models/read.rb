@@ -6,5 +6,4 @@ class Read < ApplicationRecord
     order("hit_count DESC").
     limit(10)
   }
-
 end
