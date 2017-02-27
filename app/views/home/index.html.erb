@@ -4,11 +4,19 @@
     <tr>
       <th>URL</th>
       <th>Viewed times</th>
+      <th>Status</th>
     </tr>
-    <% @hotreads.each do |hotread| %>
+    <% @hotreads.each_with_index do |hotread, index| %>
     <tr>
       <td><%=hotread.url%></td>
       <td><%=hotread.hit_count%></td>
+      <td>
+        <% if index == 0%>
+          top link
+        <% else %>
+          hot
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </table>
