@@ -1,22 +1,23 @@
-<h2>This is the top ten list:</h2>
+<h1>WELCOME TO HOTREADS!!!</h1>
+<h2>This is the top ten list from URLockbox:</h2>
 
-  <table>
-    <tr>
-      <th>URL</th>
-      <th>Viewed times</th>
-      <th>Status</th>
-    </tr>
-    <% @hotreads.each_with_index do |hotread, index| %>
-    <tr>
-      <td><a href="<%= hotread.url %>"><%= hotread.url %></a></td>
-      <td><center><%=hotread.hit_count%></center></td>
-      <td>
-        <% if index == 0%>
-          top link
-        <% else %>
-          hot
-        <% end %>
-      </td>
-    </tr>
-    <% end %>
-  </table>
+<table>
+  <tr>
+    <th>URL</th>
+    <th>Viewed times</th>
+    <th>Status</th>
+  </tr>
+  <% @hotreads.each_with_index do |hotread, index| %>
+  <tr>
+    <td><a href="<%= hotread.url %>"><%= hotread.url %></a></td>
+    <td><center><%=hotread.hit_count%></center></td>
+    <td>
+      <% if index == 0%>
+        top link
+      <% else %>
+        hot
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
